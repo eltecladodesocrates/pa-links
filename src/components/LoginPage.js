@@ -3,6 +3,7 @@ import { LinksContext } from '../context/links'
 import { startLogInUser } from '../actions/user'
 import Logout from './Logout'
 import { AuthContext } from '../context/auth'
+import { NavLink } from 'react-router-dom'
 
 
 const LoginPage = ({ history }) => {
@@ -27,7 +28,9 @@ const LoginPage = ({ history }) => {
                 <input type='email' placeholder='email' value={email} onChange={ e => setEmail(e.target.value)}/>
                 <input type='password' placeholder='password' value={password} onChange={ e => setPassword(e.target.value)}/>
                 <button className='log-button'>Send</button>
-            </form> :
+                <p className='signup-message'>Or sign up <NavLink to='/signup'>here</NavLink></p>
+            </form>
+                :
             <Logout />} 
         </div>
     )
