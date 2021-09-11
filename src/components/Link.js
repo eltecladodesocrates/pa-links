@@ -21,7 +21,7 @@ const Link = ({ link, boxNumber, history }) => {
 
     return (
         <>
-        {history.location.pathname === '/dashboard' ? 
+        {history.location.pathname === '/' ? 
             <a className={`box box-${boxNumber}`} href={link.href} target='_blank'>{link.title}</a> :
             !edit &&
                 <div className='edit-container'>
