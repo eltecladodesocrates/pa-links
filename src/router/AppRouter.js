@@ -15,9 +15,9 @@ const AppRouter = () => {
         <BrowserRouter>
             <Header />
             <Switch>
-                <Route path='/' component={LoginPage} exact/>
+                <Route path='/' component={LinksDashboard} exact/>
+                <Route path='/login' component={LoginPage}/>
                 <Route path='/create' component={CreateLink}/>
-                <Route path='/dashboard' component={LinksDashboard}/>
                 <Route path='/signup' component={SignupPage} />
                 <Route path='/edit' exact component={EditPage} />
                 <Route path="/edit/:id" component={EditLink} />

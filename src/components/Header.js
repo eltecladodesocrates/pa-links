@@ -13,10 +13,10 @@ const Header = () => {
             <nav className='container nav-bar'>
                 <h2>Welcome{user.email && `, ${user.email.substr(0, user.email.indexOf('@'))}`}</h2>
                 <ul className='nav-bar-list'>
-                    <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
+                    <li><NavLink to='/'>Dashboard</NavLink></li>
                     <li>{user.email && <NavLink to='/create'>Create</NavLink>}</li>
                     <li>{user.email && <NavLink to='/edit'>Edit</NavLink>}</li>
-                    <li>{!user.email ? <NavLink className='log-button' to='/'>Login</NavLink> : <Logout />}</li>
+                    <li>{!user.email ? <NavLink className='log-button' to='/login'>Login</NavLink> : <Logout />}</li>
                 </ul>
             </nav>
         </header>

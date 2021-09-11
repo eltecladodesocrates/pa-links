@@ -16,7 +16,7 @@ const LoginPage = ({ history }) => {
         startLogInUser(userDispatch, email, password)
         setEmail('')
         setPassword('')
-        history.push('/dashboard')
+        history.push('/')
     }
 
     return (

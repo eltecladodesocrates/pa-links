@@ -10,7 +10,7 @@ const Logout = () => {
 
     const handleLogOut = () => {
         startLogOutUser(userDispatch)
-        history.push('/dashboard')
+        history.push('/')
     }
 
     return (
