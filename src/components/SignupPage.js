@@ -1,9 +1,7 @@
 import React, {useState, useContext} from 'react'
-import { LinksContext } from '../context/links'
 import { startSignUpUser } from '../actions/user'
-import { startGetLinks, startPopulateDefault } from '../actions/links'
-import { initLinks } from '../init-links/initLinks'
 import { AuthContext } from '../context/auth'
+import {useHistory} from 'react-router'
 
 
 const SignupPage = () => {
@@ -13,6 +11,7 @@ const SignupPage = () => {
     const [rePassword, setRePassword] = useState('')
     const [error, setError] = useState('')
     const {user, userDispatch} = useContext(AuthContext)
+    const history = useHistory()
 
     const handleSignup = async e => {
         e.preventDefault()
@@ -21,6 +20,7 @@ const SignupPage = () => {
         }
         try {
             startSignUpUser(userDispatch, email, password)
+            history.push('/')
             setError('')
 
         } catch (e) {
